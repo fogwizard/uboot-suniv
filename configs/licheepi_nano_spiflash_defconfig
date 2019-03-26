@@ -25,5 +25,5 @@ CONFIG_SPL_SPI_SUNXI=y
 CONFIG_DM_SPI=y
 CONFIG_SUN6I_SPI=y
 CONFIG_USE_BOOTARGS=y
-CONFIG_BOOTARGS="panic=5 rootwait root=/dev/mtdblock3 rw rootfstype=squashfs"
+CONFIG_BOOTARGS="console=ttyS0,115200 panic=5 rootwait root=/dev/mtdblock3 rw rootfstype=squashfs"
 CONFIG_BOOTCOMMAND="sf probe 0 60000000; sf read 0x80c00000 0x70000 0x10000; sf read 0x80008000 0x80000 0x400000; bootz 0x80008000 - 0x80c00000"
